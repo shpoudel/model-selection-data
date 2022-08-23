@@ -67,7 +67,7 @@ for sw_comb in sw_combs:
     except:
         pass
     if nx.is_connected(G) and flag == 0:
-        print(sw_comb)
+        # print(sw_comb)
         switch_combinations[sw_comb_idx] = sw_comb
         sw_comb_idx += 1
 
@@ -125,3 +125,8 @@ for comb_idx, sw_comb in switch_combinations.items():
     csv_file = '../outputs/topology_' + str(comb_idx) + '.csv'
     df = pd.DataFrame(top_data_idx, columns=csv_columns)
     df.to_csv(csv_file, sep=',', index=False)
+
+print('...................................................')
+print('DONE-- Look into /outputs folder for csv files!!!!')
+
+
